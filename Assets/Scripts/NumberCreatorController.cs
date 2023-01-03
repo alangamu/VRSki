@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using VRSki.Scripts.ScriptableObjects.Variables;
 
@@ -33,7 +32,7 @@ namespace VRSki.Scripts
 
         private int GetRandomDigit()
         {
-            int randomNumberIndex = UnityEngine.Random.Range(0, _numbers.Length);
+            int randomNumberIndex = Random.Range(0, _numbers.Length);
             int randomDigit = _numbers[randomNumberIndex];
             _numbers = _numbers.Where(n => n != randomDigit).ToArray();
             return randomDigit;

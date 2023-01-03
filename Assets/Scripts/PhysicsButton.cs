@@ -5,6 +5,8 @@ namespace VRSki.Scripts
 {
     public class PhysicsButton : MonoBehaviour
     {
+        public event Action OnPressed;
+
         [SerializeField]
         private float _threshold = 0.1f;
         [SerializeField]
@@ -47,7 +49,7 @@ namespace VRSki.Scripts
         private void Pressed()
         {
             _isPressed = true;
-            print("Pressed");
+            OnPressed?.Invoke();
         }
 
         private void Released()
