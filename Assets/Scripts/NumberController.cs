@@ -28,7 +28,6 @@ namespace VRSki.Scripts
 
         private void InternalButtonOnPressed()
         {
-            print($"pressed {_digit}");
             _activeNumberDigit.SetValue(_digit);
         }
     }

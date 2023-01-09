@@ -55,7 +55,6 @@ namespace VRSki.Scripts
         private void Released()
         {
             _isPressed = false;
-            print("Released");
         }
     }
 }

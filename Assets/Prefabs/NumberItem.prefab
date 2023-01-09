@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 4124928675079000663}
   - component: {fileID: 5135434764191925940}
   - component: {fileID: 750097861139687021}
+  - component: {fileID: 2580372281295003143}
   m_Layer: 0
   m_Name: NumberItem
   m_TagString: Untagged
@@ -245,3 +246,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _numbersMeshArray: {fileID: 11400000, guid: 5967139ee032c5649969c039506b8752, type: 2}
   _numberMeshFilter: {fileID: 1521247017611485447}
+--- !u!114 &2580372281295003143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8763193867617178627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389e1a18cf0d92944bb0d6df54461964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numberCheckEvent: {fileID: 11400000, guid: c83be5be9f3980d40b8309e40a6b35b7, type: 2}
+  _activeNumberRowIndex: {fileID: 11400000, guid: 91cedb49994de6640bbcc450969cbc99, type: 2}
+  _normalMaterial: {fileID: 2100000, guid: e16ac172378295b4093bde7816670f73, type: 2}
+  _correctMaterial: {fileID: 2100000, guid: 14115f3d188a0ad4aa0d47acf40d0f2f, type: 2}
+  _nonExistentMaterial: {fileID: 2100000, guid: e5cc88a0553de0f4f929fef74886d758, type: 2}
+  _misplacedMaterial: {fileID: 2100000, guid: 113b726b484083d4587c9097ae836b3e, type: 2}
+  _meshRenderer: {fileID: 6549587357012342566}
+  _winNumber: {fileID: 11400000, guid: e8e63dc340523054396cbddb79034e99, type: 2}

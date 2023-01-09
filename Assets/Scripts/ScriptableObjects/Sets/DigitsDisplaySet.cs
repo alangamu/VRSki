@@ -13,10 +13,11 @@ namespace VRSki.Scripts.ScriptableObjects.Sets
                 if (item == digitDisplay)
                 {
                     item.Select();
-                    continue;
+                    return;
+                    //continue;
                 }
 
-                item.Deselect();
+                //item.Deselect();
             }
         }
 

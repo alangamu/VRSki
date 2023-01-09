@@ -9,6 +9,7 @@ namespace VRSki.Scripts.Interfaces
         event Action OnDeselect;
         int X { get; }
         int Y { get; }
+        int Digit { get; }
         void SetXY(int x, int y);
         void Select();
         void Deselect();

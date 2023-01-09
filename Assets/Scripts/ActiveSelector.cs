@@ -18,8 +18,9 @@ namespace VRSki.Scripts
         {
             if (TryGetComponent(out _digitDisplay))
             {
-                _digitDisplay.OnSelect += DigitDisplayOnSelect;
-                _digitDisplay.OnDeselect += DigitDisplayOnDeselect;
+                _digitDisplay.OnSelect += PutActiveMaterial;
+                _digitDisplay.OnDeselect += PutNormalMaterial;
+                _digitDisplay.OnSetDigit += DigitDisplayOnSetDigit;
             }
         }
 
@@ -27,17 +28,23 @@ namespace VRSki.Scripts
         {
             if (_digitDisplay != null)
             {
-                _digitDisplay.OnSelect -= DigitDisplayOnSelect;
-                _digitDisplay.OnDeselect -= DigitDisplayOnDeselect;
+                _digitDisplay.OnSelect -= PutActiveMaterial;
+                _digitDisplay.OnDeselect -= PutNormalMaterial;
+                _digitDisplay.OnSetDigit -= DigitDisplayOnSetDigit;
             }
         }
 
-        private void DigitDisplayOnDeselect()
+        private void DigitDisplayOnSetDigit(int digit)
+        {
+            PutNormalMaterial();
+        }
+
+        private void PutNormalMaterial()
         {
             _meshRenderer.material = _normalMaterial;
         }
 
-        private void DigitDisplayOnSelect()
+        private void PutActiveMaterial()
         {
             _meshRenderer.material = _activeMaterial;
         }

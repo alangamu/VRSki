@@ -15,13 +15,14 @@ namespace VRSki.Scripts
         public int X => _x;
         public int Y => _y;
 
+        public int Digit => _digit;
+
         [SerializeField]
         private IntVariable _winNumberLength;
 
         private int _x;
         private int _y;
-
-        private bool _isActive;
+        private int _digit;
 
         public void SetXY(int x, int y)
         {
@@ -31,18 +32,17 @@ namespace VRSki.Scripts
 
         public void Select()
         {
-            _isActive = true;
             OnSelect?.Invoke();
         }
 
         public void Deselect()
         {
-            _isActive = false;
             OnDeselect?.Invoke();
         }
 
         public void SetDigit(int digit)
         {
+            _digit = digit;
             OnSetDigit?.Invoke(digit);
         }
     }
