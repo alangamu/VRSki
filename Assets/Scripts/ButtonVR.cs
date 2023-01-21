@@ -26,7 +26,6 @@ namespace VRSki.Scripts
             {
                 if (!_isPressed)
                 {
-                    print($"{other.gameObject.transform.name} enter");
                     _button.transform.localPosition= new Vector3(0,0,-0.03f);
                     _presser = other.gameObject;
                     _onPress.Invoke();

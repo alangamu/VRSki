@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using VRSki.Scripts.ScriptableObjects.Events;
 
 namespace VRSki.Scripts
