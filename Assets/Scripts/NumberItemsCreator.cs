@@ -8,8 +8,6 @@ namespace Assets.Scripts
     public class NumberItemsCreator : MonoBehaviour
     {
         [SerializeField]
-        private Vector3 _startingPosition;
-        [SerializeField]
         private float _displaySize;
         [SerializeField]
         private float _xSeparation;
@@ -22,6 +20,8 @@ namespace Assets.Scripts
         [SerializeField]
         private GameObject _digitDisplayPrefab;
         [SerializeField]
+        private GameObject _rowButtonsDisplayPrefab;
+        [SerializeField]
         private DigitsDisplaySet _digitsDisplaySet;
 
         private void Start()
@@ -31,11 +31,11 @@ namespace Assets.Scripts
 
             for (int i = 0; i < opportunities; i++)
             {
+                GameObject rowButtonsDisplay = Instantiate(_rowButtonsDisplayPrefab, transform);
                 for (int j = 0; j < winNumberLength; j++)
                 {
                     IDigitDisplay digitDisplay;
-                    GameObject digitalDisplayObject = Instantiate(_digitDisplayPrefab, _startingPosition - new Vector3((j * _displaySize), (i * _displaySize), 0f), Quaternion.identity);
-                    digitalDisplayObject.transform.SetParent(transform);
+                    GameObject digitalDisplayObject = Instantiate(_digitDisplayPrefab, rowButtonsDisplay.transform);
                     digitalDisplayObject.name = $"Display {j}_{i}";
                     if (digitalDisplayObject.TryGetComponent(out digitDisplay))
                     {
